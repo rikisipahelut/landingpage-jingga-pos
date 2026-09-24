@@ -1,0 +1,2534 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Jingga POS - Sistem Kasir Pintar &amp; Manajemen Resto &amp; Cafe Modern
+    </title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols Outlined -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration matching the Brand Identity -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "surface-variant": "#d3e4fe",
+              surface: "#f8f9ff",
+              "on-surface-variant": "#5a4138",
+              outline: "#8e7166",
+              "secondary-container": "#fea619",
+              "surface-bright": "#f8f9ff",
+              "inverse-on-surface": "#eaf1ff",
+              "status-danger": "#DC2626",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-surface": "#0b1c30",
+              "on-tertiary-fixed-variant": "#005049",
+              "primary-fixed": "#ffdbce",
+              "status-success": "#16A34A",
+              primary: "#a33900",
+              "surface-tint": "#a73a00",
+              "surface-container-highest": "#d3e4fe",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#ffb95f",
+              tertiary: "#00685f",
+              "outline-variant": "#e2bfb2",
+              "on-background": "#0b1c30",
+              "secondary-fixed": "#ffddb8",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#00201d",
+              "surface-container-low": "#eff4ff",
+              "on-secondary-container": "#684000",
+              "inverse-primary": "#ffb599",
+              "tertiary-container": "#008378",
+              "surface-container-high": "#dce9ff",
+              "surface-container": "#e5eeff",
+              "primary-container": "#cc4900",
+              "surface-card-subtle": "#F1F5F9",
+              "on-primary-fixed-variant": "#7f2b00",
+              "inverse-surface": "#213145",
+              "brand-primary-glow": "rgba(234, 88, 12, 0.12)",
+              "on-primary-fixed": "#370e00",
+              "status-warning": "#D97706",
+              "primary-fixed-dim": "#ffb599",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#fffbff",
+              "brand-primary-deep": "#C2410C",
+              "tertiary-fixed": "#89f5e7",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#2a1700",
+              error: "#ba1a1a",
+              "brand-primary-bright": "#F97316",
+              secondary: "#855300",
+              "on-tertiary-container": "#f4fffc",
+              "surface-bg-tint": "#F8FAFC",
+              "status-info": "#0284C7",
+              background: "#f8f9ff",
+              "surface-dim": "#cbdbf5",
+              "on-tertiary": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              margin: "2.5rem",
+              "margin-mobile": "1.25rem",
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "space-lg": "1.5rem",
+              "space-2xl": "4rem",
+              "space-xl": "2.5rem",
+              "space-md": "1rem",
+              gutter: "1.5rem",
+              "space-3xl": "6rem",
+              "gutter-mobile": "1rem",
+            },
+            fontFamily: {
+              "body-xl": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+              "headline-xl": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero-mobile": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+              "display-hero": ["Plus Jakarta Sans"],
+              "headline-xl-mobile": ["Plus Jakarta Sans"],
+              "label-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "body-xl": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "30px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "20px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "label-md": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-lg": [
+                "15px",
+                {
+                  lineHeight: "22px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 500,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      .shadow-warm-glow {
+        box-shadow:
+          0px 10px 25px -3px rgba(234, 88, 12, 0.28),
+          0px 4px 10px -2px rgba(234, 88, 12, 0.15);
+      }
+      .shadow-ambient-card {
+        box-shadow:
+          0px 4px 20px -2px rgba(11, 28, 48, 0.06),
+          0px 2px 6px -1px rgba(11, 28, 48, 0.04);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-brand-primary-bright selection:text-white"
+  >
+    <!-- ================= TOP APP BAR (Shared Component Anchor) ================= -->
+    <header
+      class="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-surface-container-high shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-margin flex items-center justify-between h-20"
+      >
+        <!-- Brand Logo -->
+        <a class="flex items-center gap-3 group" href="#">
+          <div
+            class="w-11 h-11 rounded-xl bg-brand-primary-bright flex items-center justify-center text-white shadow-warm-glow transition-all duration-200 group-hover:scale-105"
+          >
+            <span
+              class="material-symbols-outlined text-2xl"
+              data-icon="point_of_sale"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >point_of_sale</span
+            >
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight"
+              >Jingga POS</span
+            >
+            <span
+              class="text-[10px] uppercase font-bold tracking-widest text-brand-primary-deep -mt-1"
+              >Cafe &amp; Resto Ops</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Navigation Links (From JSON) -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-primary font-bold text-label-lg font-label-lg transition-colors duration-200"
+            href="#fitur"
+            >Fitur</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary font-medium text-label-lg font-label-lg transition-colors duration-200"
+            href="#dashboard-web"
+            >Dashboard Web</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary font-medium text-label-lg font-label-lg transition-colors duration-200"
+            href="#aplikasi-pos"
+            >Aplikasi POS</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary font-medium text-label-lg font-label-lg transition-colors duration-200"
+            href="#harga"
+            >Harga</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary font-medium text-label-lg font-label-lg transition-colors duration-200"
+            href="#testimoni"
+            >Testimoni</a
+          >
+        </nav>
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <a
+            class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-outline-variant/60 text-on-surface font-label-lg text-label-lg hover:bg-surface-card-subtle transition-all duration-150 active:scale-95"
+            href="#demo-modal"
+          >
+            Masuk
+          </a>
+          <a
+            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-brand-primary-bright hover:bg-brand-primary-deep text-white font-label-lg text-label-lg shadow-warm-glow transition-all duration-150 active:scale-95"
+            href="#daftar"
+          >
+            <span>Coba Gratis</span>
+            <span
+              class="material-symbols-outlined text-lg"
+              data-icon="arrow_forward"
+              >arrow_forward</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- ================= HERO SECTION ================= -->
+    <section
+      class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-surface via-surface-container-low/40 to-background"
+    >
+      <!-- Atmospheric subtle background glow -->
+      <div
+        class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-brand-primary-glow blur-3xl pointer-events-none rounded-full"
+      ></div>
+      <div class="max-w-7xl mx-auto px-margin relative z-10">
+        <!-- Top Badging -->
+        <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/50 shadow-sm mb-6"
+          >
+            <div class="flex items-center text-secondary-container">
+              <span
+                class="material-symbols-outlined text-base"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-base"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-base"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-base"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-base"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+            </div>
+            <span
+              class="text-body-sm font-body-sm text-on-surface font-semibold"
+              >4.9/5</span
+            >
+            <span class="text-body-sm font-body-sm text-on-surface-variant"
+              >dari 2,400+ Pemilik Cafe &amp; Resto di Indonesia</span
+            >
+          </div>
+          <!-- Headline -->
+          <h1
+            class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface tracking-tight leading-tight mb-6"
+          >
+            Kelola Pesanan, Kasir, dan Laporan Resto &amp; Cafe dalam
+            <span
+              class="text-brand-primary-bright underline decoration-secondary-fixed-dim underline-offset-8"
+              >Satu Aplikasi Pintar</span
+            >
+          </h1>
+          <!-- Subheadline -->
+          <p
+            class="text-body-md md:text-body-xl font-body-md md:font-body-xl text-on-surface-variant max-w-2xl mx-auto mb-9 leading-relaxed"
+          >
+            Dari shift kasir anti-selisih, pesanan meja cepat, integrasi printer
+            struk Bluetooth, hingga multi-cabang terpantau realtime dari
+            genggaman Anda.
+          </p>
+          <!-- CTA Cluster -->
+          <div
+            class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          >
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-primary-bright hover:bg-brand-primary-deep text-white font-label-lg text-label-lg shadow-warm-glow transition-all duration-150 active:scale-95"
+              href="#daftar"
+            >
+              <span
+                class="material-symbols-outlined text-xl"
+                data-icon="rocket_launch"
+                >rocket_launch</span
+              >
+              <span>Mulai Uji Coba Gratis 14 Hari</span>
+            </a>
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-surface-container-lowest border border-outline-variant/80 hover:bg-surface-card-subtle text-on-surface font-label-lg text-label-lg transition-all duration-150 active:scale-95 shadow-sm"
+              href="#live-demo"
+            >
+              <span
+                class="material-symbols-outlined text-xl text-brand-primary-bright"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+              <span>Tonton Video Demo (2 Menit)</span>
+            </a>
+          </div>
+          <p
+            class="text-body-sm font-body-sm text-on-surface-variant mt-4 flex items-center gap-2"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-status-success"
+              data-icon="verified_user"
+              >verified_user</span
+            >
+            Tanpa kartu kredit • Setup instan 5 menit • Free onboarding
+          </p>
+        </div>
+        <!-- ================= HERO INTERACTIVE PREVIEW CARD ================= -->
+        <div class="mt-14 max-w-5xl mx-auto">
+          <div
+            class="rounded-2xl border border-surface-container-high bg-surface-container-lowest shadow-ambient-card overflow-hidden"
+          >
+            <!-- Top Window Chrome / Bar -->
+            <div
+              class="bg-surface-container-low px-6 py-3.5 border-b border-surface-container-high flex items-center justify-between"
+            >
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-status-danger/70"></div>
+                <div class="w-3 h-3 rounded-full bg-status-warning/70"></div>
+                <div class="w-3 h-3 rounded-full bg-status-success/70"></div>
+                <span
+                  class="ml-3 text-label-sm font-label-sm text-on-surface-variant/80"
+                  >Jingga POS Cloud Suite • Outlet: Senopati Roastery</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-status-success border border-status-success/20"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-status-success animate-pulse"
+                  ></span>
+                  Shift Buka (Kasir Aktif: Dinda)
+                </span>
+                <span
+                  class="text-label-sm font-label-sm text-on-surface-variant"
+                  >v2.4-stable</span
+                >
+              </div>
+            </div>
+            <!-- Split Preview Visual (Inspired by Login Card Reference & Dashboard Density) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+              <!-- Left Panel: Live Tablet POS Simulation -->
+              <div
+                class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-surface-container-high bg-surface-container-lowest"
+              >
+                <div>
+                  <!-- Subheader inside POS -->
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="px-2.5 py-1 rounded bg-brand-primary-glow text-brand-primary-deep text-label-sm font-label-sm font-bold"
+                        >MEJA 08</span
+                      >
+                      <span
+                        class="text-body-sm font-body-sm text-on-surface-variant"
+                        >Dine In • 3 Tamu</span
+                      >
+                    </div>
+                    <span
+                      class="text-label-sm font-label-sm text-on-surface-variant font-mono"
+                      >INV-20260408-042</span
+                    >
+                  </div>
+                  <!-- Product Grid Snapshot -->
+                  <div class="grid grid-cols-3 gap-3 mb-6">
+                    <div
+                      class="border border-surface-container-high rounded-xl p-3 bg-surface-card-subtle/50 hover:border-brand-primary-bright transition-all cursor-pointer"
+                    >
+                      <div
+                        class="h-16 rounded-lg bg-surface-container flex items-center justify-center text-brand-primary-deep mb-2"
+                      >
+                        <span
+                          class="material-symbols-outlined text-2xl"
+                          data-icon="coffee"
+                          >coffee</span
+                        >
+                      </div>
+                      <div
+                        class="text-body-sm font-bold text-on-surface truncate"
+                      >
+                        Es Kopi Jingga
+                      </div>
+                      <div
+                        class="text-label-sm font-label-sm text-brand-primary-deep"
+                      >
+                        Rp 28.000
+                      </div>
+                    </div>
+                    <div
+                      class="border border-brand-primary-bright ring-2 ring-brand-primary-glow rounded-xl p-3 bg-white transition-all cursor-pointer relative"
+                    >
+                      <span
+                        class="absolute -top-2 -right-2 bg-brand-primary-bright text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                        >2</span
+                      >
+                      <div
+                        class="h-16 rounded-lg bg-amber-50 flex items-center justify-center text-secondary mb-2"
+                      >
+                        <span
+                          class="material-symbols-outlined text-2xl"
+                          data-icon="bakery_dining"
+                          >bakery_dining</span
+                        >
+                      </div>
+                      <div
+                        class="text-body-sm font-bold text-on-surface truncate"
+                      >
+                        Butter Croissant
+                      </div>
+                      <div
+                        class="text-label-sm font-label-sm text-brand-primary-deep"
+                      >
+                        Rp 32.000
+                      </div>
+                    </div>
+                    <div
+                      class="border border-surface-container-high rounded-xl p-3 bg-surface-card-subtle/50 hover:border-brand-primary-bright transition-all cursor-pointer"
+                    >
+                      <div
+                        class="h-16 rounded-lg bg-surface-container flex items-center justify-center text-tertiary mb-2"
+                      >
+                        <span
+                          class="material-symbols-outlined text-2xl"
+                          data-icon="restaurant"
+                          >restaurant</span
+                        >
+                      </div>
+                      <div
+                        class="text-body-sm font-bold text-on-surface truncate"
+                      >
+                        Nasi Goreng Sei
+                      </div>
+                      <div
+                        class="text-label-sm font-label-sm text-brand-primary-deep"
+                      >
+                        Rp 48.000
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Order Ticket Lines -->
+                  <div
+                    class="space-y-2 border-t border-surface-container-high pt-3"
+                  >
+                    <div
+                      class="flex items-center justify-between text-body-sm font-body-sm"
+                    >
+                      <span class="text-on-surface"
+                        >2x Butter Croissant
+                        <span class="text-on-surface-variant text-xs"
+                          >(Hangat)</span
+                        ></span
+                      >
+                      <span class="font-semibold text-on-surface"
+                        >Rp 64.000</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between text-body-sm font-body-sm"
+                    >
+                      <span class="text-on-surface"
+                        >1x Es Kopi Jingga
+                        <span class="text-on-surface-variant text-xs"
+                          >(Less Sweet)</span
+                        ></span
+                      >
+                      <span class="font-semibold text-on-surface"
+                        >Rp 28.000</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-2 border-t border-dashed border-surface-container-high"
+                    >
+                      <span>Diskon Promo Opening (10%)</span>
+                      <span class="text-status-success">- Rp 9.200</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant"
+                    >
+                      <span>PB1 Resto (10%)</span>
+                      <span>Rp 8.280</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- POS Quick Action Bar -->
+                <div
+                  class="pt-4 border-t border-surface-container-high mt-4 flex items-center justify-between"
+                >
+                  <div>
+                    <div
+                      class="text-[11px] uppercase tracking-wider text-on-surface-variant font-bold"
+                    >
+                      Total Pembayaran
+                    </div>
+                    <div
+                      class="text-headline-md font-headline-md font-bold text-brand-primary-deep"
+                    >
+                      Rp 91.080
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      class="px-3.5 py-2.5 rounded-lg border border-outline-variant text-on-surface text-label-sm font-label-sm hover:bg-surface-container flex items-center gap-1.5"
+                    >
+                      <span
+                        class="material-symbols-outlined text-base"
+                        data-icon="print"
+                        >print</span
+                      >
+                      <span>58mm BT</span>
+                    </button>
+                    <button
+                      class="px-5 py-2.5 rounded-lg bg-brand-primary-bright text-white text-label-sm font-label-sm font-bold shadow-warm-glow hover:bg-brand-primary-deep flex items-center gap-1.5"
+                    >
+                      <span
+                        class="material-symbols-outlined text-base"
+                        data-icon="qr_code_scanner"
+                        >qr_code_scanner</span
+                      >
+                      <span>Bayar QRIS</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Panel: Radiant Jingga Management Canvas (From the Image Reference Concept) -->
+              <div
+                class="lg:col-span-5 bg-gradient-to-br from-brand-primary-bright via-primary-container to-brand-primary-deep text-white p-8 flex flex-col justify-between relative overflow-hidden"
+              >
+                <!-- Subtle decorative watermark circles -->
+                <div
+                  class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-white/10 blur-xl"
+                ></div>
+                <div
+                  class="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-black/10 blur-xl"
+                ></div>
+                <!-- Top Section: Shift & Cash Status -->
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between mb-6">
+                    <div
+                      class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white"
+                    >
+                      <span
+                        class="material-symbols-outlined text-2xl"
+                        data-icon="point_of_sale"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >point_of_sale</span
+                      >
+                    </div>
+                    <span
+                      class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold tracking-wide"
+                    >
+                      Live Shift Monitor
+                    </span>
+                  </div>
+                  <h3 class="text-headline-sm font-headline-sm text-white mb-2">
+                    Shift Kasir Terkontrol
+                  </h3>
+                  <p class="text-white/80 text-body-sm font-body-sm mb-6">
+                    Kalkulasi otomatis selisih kas tunai dengan akurasi 100%.
+                    Bebas resiko fraud di meja kasir.
+                  </p>
+                  <!-- Shift Metric Cards -->
+                  <div class="space-y-3">
+                    <div
+                      class="bg-white/15 backdrop-blur-md border border-white/20 rounded-xl p-3.5 flex items-center justify-between"
+                    >
+                      <div>
+                        <div
+                          class="text-[11px] text-white/75 uppercase font-medium"
+                        >
+                          Modal Awal Kasir
+                        </div>
+                        <div class="text-label-lg font-bold text-white">
+                          Rp 250.000
+                        </div>
+                      </div>
+                      <span
+                        class="material-symbols-outlined text-white/70"
+                        data-icon="lock_open"
+                        >lock_open</span
+                      >
+                    </div>
+                    <div
+                      class="bg-white/15 backdrop-blur-md border border-white/20 rounded-xl p-3.5 flex items-center justify-between"
+                    >
+                      <div>
+                        <div
+                          class="text-[11px] text-white/75 uppercase font-medium"
+                        >
+                          Penjualan Tunai Shift Ini
+                        </div>
+                        <div class="text-label-lg font-bold text-white">
+                          Rp 4.820.000
+                        </div>
+                      </div>
+                      <span
+                        class="material-symbols-outlined text-white/70"
+                        data-icon="payments"
+                        >payments</span
+                      >
+                    </div>
+                    <div
+                      class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-3.5 flex items-center justify-between"
+                    >
+                      <div>
+                        <div
+                          class="text-[11px] text-white/90 uppercase font-bold"
+                        >
+                          Status Selisih Kas
+                        </div>
+                        <div
+                          class="text-label-lg font-bold text-emerald-200 flex items-center gap-1"
+                        >
+                          <span
+                            class="material-symbols-outlined text-sm"
+                            data-icon="check_circle"
+                            >check_circle</span
+                          >
+                          Rp 0 (Sempurna &amp; Sesuai)
+                        </div>
+                      </div>
+                      <span
+                        class="px-2 py-0.5 bg-emerald-400/30 text-emerald-100 rounded text-[10px] font-bold"
+                        >MATCH</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom Footer Badge -->
+                <div
+                  class="relative z-10 pt-6 mt-6 border-t border-white/15 flex items-center justify-between text-xs text-white/80"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="security"
+                      >security</span
+                    >
+                    Protected via X-MAC-Address
+                  </span>
+                  <span class="font-medium">Multi-tenant Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SOCIAL PROOF & STATS STRIP ================= -->
+    <section
+      class="py-12 bg-surface-container-lowest border-y border-surface-container-high"
+    >
+      <div class="max-w-7xl mx-auto px-margin">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-surface-container-high"
+        >
+          <div class="pt-4 md:pt-0">
+            <div
+              class="text-headline-xl font-headline-xl text-brand-primary-deep tracking-tight font-extrabold"
+            >
+              2,500+
+            </div>
+            <div
+              class="text-body-sm font-body-sm text-on-surface-variant mt-1 font-medium"
+            >
+              Outlet Cafe &amp; Resto Aktif
+            </div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div
+              class="text-headline-xl font-headline-xl text-brand-primary-deep tracking-tight font-extrabold"
+            >
+              15 Juta+
+            </div>
+            <div
+              class="text-body-sm font-body-sm text-on-surface-variant mt-1 font-medium"
+            >
+              Transaksi Diproses Cepat
+            </div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div
+              class="text-headline-xl font-headline-xl text-brand-primary-deep tracking-tight font-extrabold"
+            >
+              99.98%
+            </div>
+            <div
+              class="text-body-sm font-body-sm text-on-surface-variant mt-1 font-medium"
+            >
+              Uptime Server Cloud
+            </div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div
+              class="text-headline-xl font-headline-xl text-brand-primary-deep tracking-tight font-extrabold"
+            >
+              &lt; 3 Detik
+            </div>
+            <div
+              class="text-body-sm font-body-sm text-on-surface-variant mt-1 font-medium"
+            >
+              Cetak Struk &amp; Pembayaran
+            </div>
+          </div>
+        </div>
+        <!-- Trusted Brand Logos -->
+        <div
+          class="mt-10 pt-8 border-t border-surface-container-high/60 flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-70"
+        >
+          <span class="text-sm font-bold uppercase tracking-wider text-outline"
+            >Dipercaya oleh:</span
+          >
+          <span
+            class="font-extrabold text-on-surface text-lg tracking-tight font-mono"
+            >SENJA COFFEE</span
+          >
+          <span class="font-extrabold text-on-surface text-lg tracking-tight"
+            >Kopi Titik Koma</span
+          >
+          <span class="font-bold text-on-surface text-lg italic"
+            >Dapoer Nusantara</span
+          >
+          <span class="font-extrabold text-on-surface text-lg tracking-wider"
+            >ROASTERY 88</span
+          >
+          <span class="font-semibold text-on-surface text-lg"
+            >Bake &amp; Co. Artisan</span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- ================= DUAL EKOSISTEM (MOBILE POS & WEB ADMIN) ================= -->
+    <section class="py-20 md:py-28 bg-surface" id="fitur">
+      <div class="max-w-7xl mx-auto px-margin">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span
+            class="px-3.5 py-1 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm font-bold uppercase tracking-wider"
+          >
+            Dual Ekosistem F&amp;B Terpadu
+          </span>
+          <h2
+            class="text-headline-lg md:text-headline-xl font-headline-lg md:font-headline-xl text-on-surface mt-4 mb-4"
+          >
+            Dirancang Khusus untuk Kecepatan Kasir dan Kendali Owner
+          </h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">
+            Dua komponen utama yang bekerja sinkron secara instan: aplikasi
+            tablet kasir untuk operasional frontline, dan web dashboard analitik
+            untuk pemilik bisnis.
+          </p>
+        </div>
+        <!-- BLOK 1: JINGGA MOBILE POS -->
+        <div
+          class="mb-24 bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-ambient-card p-8 md:p-12"
+          id="aplikasi-pos"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-orange-100 text-brand-primary-deep text-label-sm font-label-sm font-bold mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-base"
+                  data-icon="tablet_android"
+                  >tablet_android</span
+                >
+                Aplikasi Kasir Mobile &amp; Tablet
+              </div>
+              <h3
+                class="text-headline-lg font-headline-lg text-on-surface mb-4"
+              >
+                Jingga Mobile POS: Cepat di Meja Kasir, Anti-Antre Saat Peak
+                Hours
+              </h3>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant mb-8 leading-relaxed"
+              >
+                Mendukung perangkat Android &amp; iOS dengan antarmuka yang
+                sangat responsif, memudahkan kasir baru belajar dalam 10 menit
+                tanpa pelatihan berbelit-belit.
+              </p>
+              <!-- 6 Key Sub-features from APPS document -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="account_balance_wallet"
+                      >account_balance_wallet</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Manajemen Shift &amp; Kas
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Wajib Buka Kas sebelum transaksi, Tutup Kas otomatis hitung
+                    selisih uang riil.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="table_restaurant"
+                      >table_restaurant</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Mode Dine-in &amp; Pesanan
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Dine-in (nomor meja), Take-away, dan Delivery. Simpan
+                    tagihan unpaid (bayar nanti).
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="percent"
+                      >percent</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Diskon &amp; Pajak PB1
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Diskon nominal (Rp) atau persentase (%), otomatis kalkulasi
+                    pajak resto &amp; grand total.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="payments"
+                      >payments</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Multi Pembayaran
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Cash kembalian instan, QRIS dinamis QRIS payment, kartu
+                    debit &amp; transfer bank.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="print"
+                      >print</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Printer Bluetooth
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Support thermal 58mm &amp; 80mm Bluetooth dan cetak ulang
+                    struk.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-bg-tint border border-surface-container-high"
+                >
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-bright/10 text-brand-primary-deep flex items-center justify-center mb-2"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="phonelink_lock"
+                      >phonelink_lock</span
+                    >
+                  </div>
+                  <h4
+                    class="text-label-lg font-label-lg text-on-surface font-bold"
+                  >
+                    Proteksi X-MAC Device
+                  </h4>
+                  <p
+                    class="text-body-sm font-body-sm text-on-surface-variant mt-1"
+                  >
+                    Satu akun kasir terkunci pada satu hardware resmi outlet
+                    untuk cegah akses luar.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Right Visual Showcase of Mobile POS -->
+            <div class="lg:col-span-7 order-1 lg:order-2">
+              <div
+                class="rounded-2xl bg-surface-container-low border border-surface-container-high p-6 shadow-inner"
+              >
+                <div
+                  class="flex items-center justify-between pb-4 border-b border-surface-container-high"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-brand-primary-bright text-white flex items-center justify-center font-bold"
+                    >
+                      JP
+                    </div>
+                    <div>
+                      <div class="text-label-lg font-bold text-on-surface">
+                        Jingga POS Tablet UI
+                      </div>
+                      <div class="text-body-sm text-on-surface-variant">
+                        Layar Kasir Mode Grid Menu &amp; Live Cart
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-status-success/10 text-status-success text-xs font-bold"
+                    >Online • BT Connected</span
+                  >
+                </div>
+                <!-- Interactive Simulated Register Interface -->
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Left: Category tabs & menu items -->
+                  <div class="space-y-3">
+                    <div class="flex gap-2 pb-1 overflow-x-auto">
+                      <span
+                        class="px-3 py-1 bg-brand-primary-bright text-white text-xs font-bold rounded-lg whitespace-nowrap"
+                        >Semua (24)</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-xs font-medium rounded-lg whitespace-nowrap"
+                        >Coffee</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-xs font-medium rounded-lg whitespace-nowrap"
+                        >Pastry</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-xs font-medium rounded-lg whitespace-nowrap"
+                        >Makanan</span
+                      >
+                    </div>
+                    <div class="space-y-2">
+                      <div
+                        class="flex items-center justify-between p-2.5 bg-surface-container-lowest rounded-xl border border-surface-container-high"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span
+                            class="material-symbols-outlined text-brand-primary-deep text-lg"
+                            data-icon="local_cafe"
+                            >local_cafe</span
+                          >
+                          <div>
+                            <div class="text-xs font-bold text-on-surface">
+                              Caramel Macchiato
+                            </div>
+                            <div class="text-[11px] text-on-surface-variant">
+                              Rp 35.000
+                            </div>
+                          </div>
+                        </div>
+                        <span
+                          class="material-symbols-outlined text-brand-primary-bright"
+                          data-icon="add_circle"
+                          >add_circle</span
+                        >
+                      </div>
+                      <div
+                        class="flex items-center justify-between p-2.5 bg-surface-container-lowest rounded-xl border border-surface-container-high"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span
+                            class="material-symbols-outlined text-brand-primary-deep text-lg"
+                            data-icon="local_drink"
+                            >local_drink</span
+                          >
+                          <div>
+                            <div class="text-xs font-bold text-on-surface">
+                              Matcha Latte Oatmilk
+                            </div>
+                            <div class="text-[11px] text-on-surface-variant">
+                              Rp 38.000
+                            </div>
+                          </div>
+                        </div>
+                        <span
+                          class="material-symbols-outlined text-brand-primary-bright"
+                          data-icon="add_circle"
+                          >add_circle</span
+                        >
+                      </div>
+                      <div
+                        class="flex items-center justify-between p-2.5 bg-surface-container-lowest rounded-xl border border-surface-container-high"
+                      >
+                        <div class="flex items-center gap-2">
+                          <span
+                            class="material-symbols-outlined text-brand-primary-deep text-lg"
+                            data-icon="cake"
+                            >cake</span
+                          >
+                          <div>
+                            <div class="text-xs font-bold text-on-surface">
+                              Pain au Chocolat
+                            </div>
+                            <div class="text-[11px] text-on-surface-variant">
+                              Rp 30.000
+                            </div>
+                          </div>
+                        </div>
+                        <span
+                          class="material-symbols-outlined text-brand-primary-bright"
+                          data-icon="add_circle"
+                          >add_circle</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right: Active Shift Drawer Snapshot -->
+                  <div
+                    class="bg-surface-container-lowest rounded-xl border border-surface-container-high p-4 flex flex-col justify-between"
+                  >
+                    <div>
+                      <div
+                        class="text-xs font-bold text-on-surface mb-2 flex items-center justify-between"
+                      >
+                        <span>Proses Buka/Tutup Kas</span>
+                        <span
+                          class="material-symbols-outlined text-brand-primary-deep text-sm"
+                          data-icon="lock_clock"
+                          >lock_clock</span
+                        >
+                      </div>
+                      <div class="space-y-2 text-xs">
+                        <div
+                          class="flex justify-between py-1 border-b border-surface-container-high"
+                        >
+                          <span class="text-on-surface-variant"
+                            >Shift Kasir:</span
+                          >
+                          <span class="font-bold text-on-surface"
+                            >Pagi (08:00 - 16:00)</span
+                          >
+                        </div>
+                        <div
+                          class="flex justify-between py-1 border-b border-surface-container-high"
+                        >
+                          <span class="text-on-surface-variant"
+                            >Petugas Kasir:</span
+                          >
+                          <span class="font-bold text-on-surface"
+                            >Budi Pratama</span
+                          >
+                        </div>
+                        <div
+                          class="flex justify-between py-1 border-b border-surface-container-high"
+                        >
+                          <span class="text-on-surface-variant"
+                            >Total Tunai Sistem:</span
+                          >
+                          <span class="font-bold text-on-surface"
+                            >Rp 1.450.000</span
+                          >
+                        </div>
+                        <div class="flex justify-between py-1">
+                          <span class="text-on-surface-variant"
+                            >Hitungan Kas Fisik:</span
+                          >
+                          <span class="font-bold text-status-success"
+                            >Rp 1.450.000</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-4 pt-3 border-t border-surface-container-high"
+                    >
+                      <div
+                        class="w-full py-2 bg-brand-primary-bright text-white rounded-lg text-center text-xs font-bold"
+                      >
+                        Cetak Laporan Rekap Shift
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BLOK 2: JINGGA WEB DASHBOARD ADMIN -->
+        <div
+          class="bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-ambient-card p-8 md:p-12"
+          id="dashboard-web"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Visual Preview of Web Admin -->
+            <div class="lg:col-span-7">
+              <div
+                class="rounded-2xl bg-inverse-surface text-inverse-on-surface p-6 shadow-xl border border-surface-container-high/20"
+              >
+                <!-- Admin Header Bar -->
+                <div
+                  class="flex items-center justify-between pb-4 border-b border-inverse-on-surface/15"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-brand-primary-bright flex items-center justify-center text-white"
+                    >
+                      <span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="space_dashboard"
+                        >space_dashboard</span
+                      >
+                    </div>
+                    <div>
+                      <div class="text-label-md font-bold text-white">
+                        Jingga Admin Portal
+                      </div>
+                      <div class="text-[11px] text-inverse-on-surface/60">
+                        Tenant: Kopi Jiwa Group (5 Outlet)
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Outlet Switcher dropdown mockup -->
+                  <div
+                    class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-xs font-medium text-white border border-white/10"
+                  >
+                    <span
+                      class="material-symbols-outlined text-xs text-brand-primary-bright"
+                      data-icon="store"
+                      >store</span
+                    >
+                    <span>Cabang Bandung Progo</span>
+                    <span
+                      class="material-symbols-outlined text-xs"
+                      data-icon="arrow_drop_down"
+                      >arrow_drop_down</span
+                    >
+                  </div>
+                </div>
+                <!-- Revenue & Metrics snapshot -->
+                <div class="grid grid-cols-3 gap-3 my-5">
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                    <div class="text-[11px] text-inverse-on-surface/60">
+                      Omzet Hari Ini
+                    </div>
+                    <div
+                      class="text-headline-sm font-bold text-brand-primary-bright mt-1"
+                    >
+                      Rp 12.840.000
+                    </div>
+                    <div
+                      class="text-[10px] text-status-success mt-0.5 flex items-center gap-0.5"
+                    >
+                      <span
+                        class="material-symbols-outlined text-xs"
+                        data-icon="trending_up"
+                        >trending_up</span
+                      >
+                      +14.2% vs kemarin
+                    </div>
+                  </div>
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                    <div class="text-[11px] text-inverse-on-surface/60">
+                      Total Struk
+                    </div>
+                    <div class="text-headline-sm font-bold text-white mt-1">
+                      318 Bill
+                    </div>
+                    <div class="text-[10px] text-inverse-on-surface/60 mt-0.5">
+                      Avg: Rp 40.370
+                    </div>
+                  </div>
+                  <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                    <div class="text-[11px] text-inverse-on-surface/60">
+                      Menu Terlaris
+                    </div>
+                    <div
+                      class="text-headline-sm font-bold text-secondary-fixed mt-1"
+                    >
+                      Aren Latte
+                    </div>
+                    <div class="text-[10px] text-inverse-on-surface/60 mt-0.5">
+                      142 Porsi terjual
+                    </div>
+                  </div>
+                </div>
+                <!-- Mini Data Table Mockup -->
+                <div
+                  class="bg-white/5 rounded-xl border border-white/10 overflow-hidden"
+                >
+                  <div
+                    class="px-4 py-2.5 bg-white/10 flex items-center justify-between text-xs font-semibold"
+                  >
+                    <span>Transaksi Terkini (Realtime Sync)</span>
+                    <button
+                      class="text-brand-primary-bright text-[11px] flex items-center gap-1 hover:underline"
+                    >
+                      <span
+                        class="material-symbols-outlined text-xs"
+                        data-icon="download"
+                        >download</span
+                      >
+                      Ekspor Excel (.xlsx)
+                    </button>
+                  </div>
+                  <div class="divide-y divide-white/10 text-xs">
+                    <div class="px-4 py-2 flex items-center justify-between">
+                      <div>
+                        <span class="font-mono text-white/90">#INV-9021</span> •
+                        <span>Table 03</span>
+                      </div>
+                      <span class="text-white/60">Tunai</span>
+                      <span class="font-bold text-white">Rp 84.000</span>
+                      <span
+                        class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold"
+                        >PAID</span
+                      >
+                    </div>
+                    <div class="px-4 py-2 flex items-center justify-between">
+                      <div>
+                        <span class="font-mono text-white/90">#INV-9020</span> •
+                        <span>Take Away</span>
+                      </div>
+                      <span class="text-white/60">QRIS Dinamis</span>
+                      <span class="font-bold text-white">Rp 145.000</span>
+                      <span
+                        class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold"
+                        >PAID</span
+                      >
+                    </div>
+                    <div class="px-4 py-2 flex items-center justify-between">
+                      <div>
+                        <span class="font-mono text-white/90">#INV-9019</span> •
+                        <span>Table 12</span>
+                      </div>
+                      <span class="text-white/60">BCA Transfer</span>
+                      <span class="font-bold text-white">Rp 210.000</span>
+                      <span
+                        class="px-2 py-0.5 rounded text-[10px] bg-amber-500/20 text-amber-300 font-semibold"
+                        >UNPAID</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Dark mode pill reminder -->
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-inverse-on-surface/50"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="dark_mode"
+                      >dark_mode</span
+                    >
+                    Dark Mode Built-in untuk kenyamanan display resto di
+                    bar/kitchen
+                  </span>
+                  <span class="text-brand-primary-bright font-bold"
+                    >Sinkronisasi &lt; 1 Detik</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Right Content for Web Dashboard -->
+            <div class="lg:col-span-5">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-orange-100 text-brand-primary-deep text-label-sm font-label-sm font-bold mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-base"
+                  data-icon="web"
+                  >web</span
+                >
+                Dashboard Manajemen Berbasis Web
+              </div>
+              <h3
+                class="text-headline-lg font-headline-lg text-on-surface mb-4"
+              >
+                Jingga Web Admin: Kendali Penuh Bisnis Kuliner Anda di Mana Saja
+              </h3>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant mb-8 leading-relaxed"
+              >
+                Akses dari laptop atau smartphone via browser apa pun. Pantau
+                penjualan real-time, kelola inventori menu, dan delegasikan
+                akses staf dengan tingkat keamanan enterprise.
+              </p>
+              <!-- Dashboard Points from Features -->
+              <div class="space-y-4">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center shrink-0 mt-0.5"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="domain"
+                      >domain</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="text-label-lg font-label-lg text-on-surface font-bold"
+                    >
+                      Multi-Tenant &amp; Outlet Switcher
+                    </h4>
+                    <p
+                      class="text-body-sm font-body-sm text-on-surface-variant mt-0.5"
+                    >
+                      Ganti tampilan antar cabang semudah 1 kali klik. Pantau
+                      performa outlet terbaik dalam hitungan detik.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center shrink-0 mt-0.5"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="inventory_2"
+                      >inventory_2</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="text-label-lg font-label-lg text-on-surface font-bold"
+                    >
+                      Master Data &amp; Produk Terpusat
+                    </h4>
+                    <p
+                      class="text-body-sm font-body-sm text-on-surface-variant mt-0.5"
+                    >
+                      CRUD menu dengan foto, harga khusus per-outlet, kategori
+                      terstruktur, dan penyesuaian stok instan.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center shrink-0 mt-0.5"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="manage_accounts"
+                      >manage_accounts</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="text-label-lg font-label-lg text-on-surface font-bold"
+                    >
+                      Role Staf: Superadmin, Owner, &amp; Kasir
+                    </h4>
+                    <p
+                      class="text-body-sm font-body-sm text-on-surface-variant mt-0.5"
+                    >
+                      Batasi akses sensitif. Fitur nonaktifkan staf keluar dan
+                      reset password tanpa repot.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center shrink-0 mt-0.5"
+                  >
+                    <span
+                      class="material-symbols-outlined text-lg"
+                      data-icon="file_download"
+                      >file_download</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="text-label-lg font-label-lg text-on-surface font-bold"
+                    >
+                      Laporan Omzet Realtime &amp; Ekspor Excel
+                    </h4>
+                    <p
+                      class="text-body-sm font-body-sm text-on-surface-variant mt-0.5"
+                    >
+                      Tarik rekapan pajak, rincian pembayaran, dan laba kotor
+                      langsung ke format .xlsx untuk akuntan Anda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= BENTO GRID: FITUR PINTAR OPERASIONAL ================= -->
+    <section class="py-20 bg-surface-container-low/50">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="px-3.5 py-1 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm font-bold uppercase tracking-wider"
+          >
+            Keunggulan Arsitektur
+          </span>
+          <h2
+            class="text-headline-lg md:text-headline-xl font-headline-lg md:font-headline-xl text-on-surface mt-4 mb-4"
+          >
+            Mengapa Pengusaha F&amp;B Beralih ke Jingga POS?
+          </h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">
+            Dibuat berdasarkan ribuan jam observasi di balik meja kasir kafe dan
+            dapur restoran yang sibuk.
+          </p>
+        </div>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Bento Card 1: Shift Control (Big emphasis) -->
+          <div
+            class="md:col-span-2 rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card relative overflow-hidden flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <span
+                class="px-3 py-1 rounded bg-orange-100 text-brand-primary-deep text-label-sm font-label-sm font-bold"
+                >Akuntabilitas Finansial</span
+              >
+              <h3
+                class="text-headline-md font-headline-md text-on-surface mt-3 mb-2"
+              >
+                Eliminasi Selisih Uang Kasir 100%
+              </h3>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant max-w-lg mb-6"
+              >
+                Sistem Jingga POS memaksa protokol shift yang disiplin. Staf
+                tidak bisa mengakhiri hari tanpa mencocokkan uang fisik dengan
+                catatan transaksi tunai di aplikasi.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-3 gap-3 bg-surface-bg-tint p-4 rounded-xl border border-surface-container-high relative z-10"
+            >
+              <div>
+                <div
+                  class="text-[11px] text-on-surface-variant font-bold uppercase"
+                >
+                  Buka Kas Wajib
+                </div>
+                <div class="text-body-sm font-bold text-on-surface mt-0.5">
+                  Input Modal Pagi
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-[11px] text-on-surface-variant font-bold uppercase"
+                >
+                  Kalkulasi Otomatis
+                </div>
+                <div class="text-body-sm font-bold text-on-surface mt-0.5">
+                  Deteksi Selisih Riil
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-[11px] text-on-surface-variant font-bold uppercase"
+                >
+                  Audit Trail
+                </div>
+                <div
+                  class="text-body-sm font-bold text-brand-primary-deep mt-0.5"
+                >
+                  Struk Serah Terima
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bento Card 2: Hardware Security -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="lock"
+                  >lock</span
+                >
+              </div>
+              <h3
+                class="text-headline-sm font-headline-sm text-on-surface mb-2"
+              >
+                Proteksi 1 Akun 1 Perangkat
+              </h3>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+              >
+                Mencegah kebocoran akun kasir yang dipakai di luar outlet
+                melalui validasi hardware token X-MAC Address.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-xs font-bold text-status-success"
+            >
+              <span>Hardware Token Validated</span>
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="check_circle"
+                >check_circle</span
+              >
+            </div>
+          </div>
+          <!-- Bento Card 3: Unpaid Orders -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="receipt_long"
+                  >receipt_long</span
+                >
+              </div>
+              <h3
+                class="text-headline-sm font-headline-sm text-on-surface mb-2"
+              >
+                Simpan &amp; Tunda Bill (Unpaid)
+              </h3>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+              >
+                Pelanggan ingin nongkrong lebih lama dan tambah pesanan
+                berkali-kali? Cukup simpan transaksi tanpa mengganggu antrean
+                baru.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-surface-container-high flex items-center gap-2 text-xs text-on-surface-variant"
+            >
+              <span
+                class="material-symbols-outlined text-sm text-brand-primary-bright"
+                data-icon="bolt"
+                >bolt</span
+              >
+              <span>Mendukung Gabung Meja</span>
+            </div>
+          </div>
+          <!-- Bento Card 4: Printer Fleksibel Bluetooth -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="bluetooth"
+                  >bluetooth</span
+                >
+              </div>
+              <h3
+                class="text-headline-sm font-headline-sm text-on-surface mb-2"
+              >
+                Koneksi Thermal 58/80mm
+              </h3>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+              >
+                Kompatibel dengan semua merk printer thermal Bluetooth populer
+                di marketplace Indonesia. Cetak logo outlet Anda dengan rapi.
+              </p>
+            </div>
+          </div>
+          <!-- Bento Card 5: Dark Mode & Responsive -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-xl bg-brand-primary-glow text-brand-primary-deep flex items-center justify-center mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="contrast"
+                  >contrast</span
+                >
+              </div>
+              <h3
+                class="text-headline-sm font-headline-sm text-on-surface mb-2"
+              >
+                Desain Dark &amp; Light Adaptif
+              </h3>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+              >
+                Pencahayaan bar temaram atau teras cafe siang hari terik?
+                Tampilan Jingga POS beradaptasi secara mulus agar mata kasir
+                tidak lelah.
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant"
+            >
+              <span>High Contrast Visual</span>
+              <span class="text-brand-primary-deep font-bold">Ergonomis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= PAKET HARGA & LANGGANAN (PRICING) ================= -->
+    <section class="py-20 md:py-28 bg-surface-container-lowest" id="harga">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="px-3.5 py-1 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm font-bold uppercase tracking-wider"
+          >
+            Investasi Transparan
+          </span>
+          <h2
+            class="text-headline-lg md:text-headline-xl font-headline-lg md:font-headline-xl text-on-surface mt-4 mb-4"
+          >
+            Pilihan Paket Sesuai Skala Bisnis Kuliner Anda
+          </h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">
+            Semua paket sudah termasuk update gratis, backup cloud otomatis, dan
+            tim support yang responsif setiap hari.
+          </p>
+        </div>
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <!-- Paket 1: Starter -->
+          <div
+            class="rounded-2xl border border-surface-container-high bg-surface-bg-tint p-8 flex flex-col justify-between hover:border-outline-variant transition-all"
+          >
+            <div>
+              <div
+                class="text-label-lg font-label-lg font-bold text-on-surface"
+              >
+                Paket Starter
+              </div>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant mt-1 mb-6"
+              >
+                Cocok untuk gerai kopi kecil, cloud kitchen, atau booth makanan
+                tunggal.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span
+                  class="text-headline-xl font-headline-xl font-extrabold text-on-surface"
+                  >Rp 59.000</span
+                >
+                <span class="text-body-sm text-on-surface-variant"
+                  >/ bulan / outlet</span
+                >
+              </div>
+              <div
+                class="space-y-3 pt-6 border-t border-surface-container-high text-body-sm font-body-sm text-on-surface"
+              >
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>1 Akun Kasir + 1 Outlet</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Manajemen Buka/Tutup Kas Shift</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Cetak Printer Bluetooth 58mm</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Laporan Penjualan Harian Ringkas</span>
+                </div>
+                <div
+                  class="flex items-center gap-2.5 text-on-surface-variant/60"
+                >
+                  <span
+                    class="material-symbols-outlined text-base"
+                    data-icon="close"
+                    >close</span
+                  >
+                  <span>Multi-Outlet Switcher</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <a
+                class="w-full inline-flex items-center justify-center py-3 rounded-xl border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-all"
+                href="#daftar"
+              >
+                Pilih Paket Starter
+              </a>
+            </div>
+          </div>
+          <!-- Paket 2: Pro (Paling Populer) -->
+          <div
+            class="rounded-2xl border-2 border-brand-primary-bright bg-surface-container-lowest p-8 flex flex-col justify-between shadow-warm-glow relative"
+          >
+            <div
+              class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-primary-bright text-white text-[11px] font-extrabold uppercase tracking-wider shadow-sm"
+            >
+              Paling Populer untuk Resto &amp; Cafe
+            </div>
+            <div>
+              <div
+                class="text-label-lg font-label-lg font-bold text-brand-primary-deep"
+              >
+                Paket Pro Resto
+              </div>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant mt-1 mb-6"
+              >
+                Pilihan utama cafe &amp; resto dengan meja makan, dine-in, dan
+                multi-kasir.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span
+                  class="text-headline-xl font-headline-xl font-extrabold text-brand-primary-deep"
+                  >Rp 159.000</span
+                >
+                <span class="text-body-sm text-on-surface-variant"
+                  >/ bulan / outlet</span
+                >
+              </div>
+              <div
+                class="space-y-3 pt-6 border-t border-surface-container-high text-body-sm font-body-sm text-on-surface"
+              >
+                <div
+                  class="flex items-center gap-2.5 font-semibold text-on-surface"
+                >
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Semua Fitur Paket Starter</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Hingga 5 Akun Kasir + Role Staf</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Mode Dine-in &amp; Nomor Meja Lengkap</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Simpan Pesanan Unpaid</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Laporan Omzet Realtime + Ekspor Excel</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <a
+                class="w-full inline-flex items-center justify-center py-3.5 rounded-xl bg-brand-primary-bright hover:bg-brand-primary-deep text-white font-label-lg text-label-lg shadow-warm-glow transition-all active:scale-95"
+                href="#daftar"
+              >
+                Coba Gratis 14 Hari Sekarang
+              </a>
+            </div>
+          </div>
+          <!-- Paket 3: Enterprise Multi-Outlet -->
+          <div
+            class="rounded-2xl border border-surface-container-high bg-surface-bg-tint p-8 flex flex-col justify-between hover:border-outline-variant transition-all"
+          >
+            <div>
+              <div
+                class="text-label-lg font-label-lg font-bold text-on-surface"
+              >
+                Paket Enterprise Franchise
+              </div>
+              <p
+                class="text-body-sm font-body-sm text-on-surface-variant mt-1 mb-6"
+              >
+                Untuk rantai resto, waralaba kuliner, dan multi-cabang
+                terintegrasi.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span
+                  class="text-headline-xl font-headline-xl font-extrabold text-on-surface"
+                  >Rp 399.000</span
+                >
+                <span class="text-body-sm text-on-surface-variant"
+                  >/ bulan / outlet</span
+                >
+              </div>
+              <div
+                class="space-y-3 pt-6 border-t border-surface-container-high text-body-sm font-body-sm text-on-surface"
+              >
+                <div class="flex items-center gap-2.5 font-semibold">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Semua Fitur Paket Pro</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Multi-Tenant &amp; Outlet Switcher Unlimited</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Superadmin Dashboard &amp; Analisa Komparasi</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="material-symbols-outlined text-status-success text-base"
+                    data-icon="check"
+                    >check</span
+                  >
+                  <span>Akses Prioritas ke Fitur Terbaru</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <a
+                class="w-full inline-flex items-center justify-center py-3 rounded-xl border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-all"
+                href="https://wa.me/6281934631646?text=Halo%20Tim%20Sales%20Jingga%20POS%2C%20saya%20tertarik%20dengan%20paket%20Enterprise.%20Mohon%20info%20lebih%20lanjut."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hubungi Tim Sales Enterprise
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= TESTIMONI PENGGUNA REAL ================= -->
+    <section class="py-20 bg-surface" id="testimoni">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="px-3.5 py-1 rounded-full bg-surface-container-highest text-primary text-label-sm font-label-sm font-bold uppercase tracking-wider"
+          >
+            Kisah Sukses Mitra
+          </span>
+          <h2
+            class="text-headline-lg md:text-headline-xl font-headline-lg md:font-headline-xl text-on-surface mt-4 mb-4"
+          >
+            Dipercaya Pemilik Bisnis Kuliner dari Sabang sampai Merauke
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center gap-1 text-secondary-container mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p class="text-body-md font-body-md text-on-surface italic mb-6">
+                "Sebelum pakai Jingga POS, kasir sering tekor Rp 50.000–100.000
+                setiap pergantian shift. Sejak ada fitur Buka/Tutup Kas dan
+                proteksi device, selisih kas jadi nol rupiah tiap malam.
+                Ketenangan pikiran buat owner!"
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 pt-4 border-t border-surface-container-high"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-orange-100 text-brand-primary-deep flex items-center justify-center font-bold"
+              >
+                RA
+              </div>
+              <div>
+                <div class="text-label-lg font-bold text-on-surface">
+                  Rian Andika
+                </div>
+                <div class="text-body-sm text-on-surface-variant">
+                  Owner Senja Coffee &amp; Space (Bandung)
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center gap-1 text-secondary-container mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p class="text-body-md font-body-md text-on-surface italic mb-6">
+                "Fitur Multi-Outlet di Web Admin-nya luar biasa cepat. Saya
+                punya 4 cabang resto sei sapi di Jakarta dan Bekasi, semuanya
+                bisa saya pantau omzetnya langsung dari handphone tanpa harus
+                telepon kasir satu-satu."
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 pt-4 border-t border-surface-container-high"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-orange-100 text-brand-primary-deep flex items-center justify-center font-bold"
+              >
+                MW
+              </div>
+              <div>
+                <div class="text-label-lg font-bold text-on-surface">
+                  Maya Wijaya
+                </div>
+                <div class="text-body-sm text-on-surface-variant">
+                  Founder Dapoer Sei Nusantara
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div
+            class="rounded-2xl bg-surface-container-lowest border border-surface-container-high p-8 shadow-ambient-card flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="flex items-center gap-1 text-secondary-container mb-4"
+              >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-lg"
+                  data-icon="star"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p class="text-body-md font-body-md text-on-surface italic mb-6">
+                "Koneksi printer Bluetooth 58mm-nya sangat stabil dan auto-print
+                begitu bayar. Kasir part-time yang baru masuk pun bisa langsung
+                lancar pakai dalam 15 menit. Sangat direkomendasikan untuk
+                F&amp;B modern."
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 pt-4 border-t border-surface-container-high"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-orange-100 text-brand-primary-deep flex items-center justify-center font-bold"
+              >
+                FK
+              </div>
+              <div>
+                <div class="text-label-lg font-bold text-on-surface">
+                  Ferry Kurniawan
+                </div>
+                <div class="text-body-sm text-on-surface-variant">
+                  Manager Operasional Bake &amp; Co.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= RADIANT CALL TO ACTION BANNER ================= -->
+    <section
+      class="py-20 relative overflow-hidden bg-brand-primary-deep text-white"
+      id="daftar"
+    >
+      <!-- Atmospheric radiant glow -->
+      <div
+        class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-primary-bright blur-3xl opacity-60"
+      ></div>
+      <div
+        class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-black blur-2xl opacity-40"
+      ></div>
+      <div class="max-w-5xl mx-auto px-margin relative z-10 text-center">
+        <div
+          class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md mb-6 shadow-inner border border-white/20"
+        >
+          <span
+            class="material-symbols-outlined text-3xl text-white"
+            data-icon="point_of_sale"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >point_of_sale</span
+          >
+        </div>
+        <h2
+          class="text-headline-lg md:text-headline-xl font-headline-lg md:font-headline-xl text-white tracking-tight mb-4"
+        >
+          Siap Tingkatkan Omzet dan Rapikan Kasir Resto Anda Hari Ini?
+        </h2>
+        <p
+          class="text-body-md md:text-body-xl font-body-md md:font-body-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Daftar sekarang dan nikmati akses penuh seluruh fitur Jingga POS
+          selama 14 hari gratis tanpa komitmen kartu kredit.
+        </p>
+        <form
+          id="trial-form"
+          class="max-w-md mx-auto bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 shadow-2xl flex flex-col sm:flex-row gap-2"
+        >
+          <input
+            id="trial-email"
+            class="w-full px-4 py-3.5 rounded-xl bg-white text-on-surface placeholder:text-outline text-body-md border-0 focus:ring-2 focus:ring-brand-primary-bright focus:outline-none"
+            placeholder="Masukkan email usaha resto Anda..."
+            type="email"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-brand-primary-bright hover:bg-orange-600 text-white font-label-lg text-label-lg font-bold shadow-lg transition-all duration-150 active:scale-95 whitespace-nowrap"
+          >
+            Coba Gratis
+          </button>
+        </form>
+        <script>
+          document
+            .getElementById("trial-form")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+              var email = document.getElementById("trial-email").value.trim();
+              var subject = "Coba Gratis JinggaPOS";
+              var body =
+                "Halo Tim Jingga POS,\n\nSaya ingin mencoba Jingga POS gratis selama 14 hari.\n\nEmail usaha saya: " +
+                email +
+                "\n\nTerima kasih.";
+              window.location.href =
+                "mailto:rikisipahelut@gmail.com?subject=" +
+                encodeURIComponent(subject) +
+                "&body=" +
+                encodeURIComponent(body);
+            });
+        </script>
+        <div
+          class="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80"
+        >
+          <span class="flex items-center gap-1.5">
+            <span
+              class="material-symbols-outlined text-base text-emerald-300"
+              data-icon="check_circle"
+              >check_circle</span
+            >
+            Setup Dalam 5 Menit
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span
+              class="material-symbols-outlined text-base text-emerald-300"
+              data-icon="check_circle"
+              >check_circle</span
+            >
+            Panduan Tim Support Siap Bantu
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span
+              class="material-symbols-outlined text-base text-emerald-300"
+              data-icon="check_circle"
+              >check_circle</span
+            >
+            Bisa Pakai Tablet Sendiri
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- ================= FOOTER (Shared Component Anchor) ================= -->
+    <footer
+      class="w-full bg-inverse-surface border-t border-inverse-surface/40"
+    >
+      <div class="max-w-7xl mx-auto px-margin py-space-2xl">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10"
+        >
+          <!-- Brand Description -->
+          <div class="md:col-span-5 space-y-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-brand-primary-bright flex items-center justify-center text-white"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="point_of_sale"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >point_of_sale</span
+                >
+              </div>
+              <span
+                class="text-headline-md font-headline-md font-extrabold text-inverse-on-surface tracking-tight"
+                >Jingga POS</span
+              >
+            </div>
+            <p
+              class="text-body-sm font-body-sm text-inverse-on-surface/70 max-w-sm leading-relaxed"
+            >
+              Sistem kasir pintar dan manajemen resto &amp; cafe modern.
+              Mengintegrasikan pencatatan kasir frontline dengan kontrol
+              akuntansi multi-cabang super cepat.
+            </p>
+            <div
+              class="text-body-sm font-body-sm text-inverse-on-surface/60 space-y-1 pt-2"
+            >
+              <div>
+                <strong class="text-inverse-on-surface/90"
+                  >Kantor Operasional:</strong
+                >
+                Jalan Tegal Harum Kesiman Kertalangu, Kec. Denpasar Tim., Kota
+                Denpasar, Bali, Indonesia
+              </div>
+              <div>
+                <strong class="text-inverse-on-surface/90"
+                  >Customer Support:</strong
+                >
+                support@jinggapos.id • 0819-3463-1646
+              </div>
+            </div>
+          </div>
+          <!-- Links Column 1: Fitur & Produk (From JSON links) -->
+          <div class="md:col-span-4 space-y-3">
+            <div
+              class="text-label-md font-label-md text-inverse-on-surface uppercase tracking-wider font-bold"
+            >
+              Navigasi Produk
+            </div>
+            <ul class="space-y-2.5 text-body-sm font-body-sm">
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#aplikasi-pos"
+                  >Fitur Mobile POS</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#dashboard-web"
+                  >Web Admin</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#harga"
+                  >Paket Harga</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Dokumentasi API</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Pusat Bantuan</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links Column 2: Legalitas & Keamanan (From JSON links) -->
+          <div class="md:col-span-3 space-y-3">
+            <div
+              class="text-label-md font-label-md text-inverse-on-surface uppercase tracking-wider font-bold"
+            >
+              Legalitas &amp; Sistem
+            </div>
+            <ul class="space-y-2.5 text-body-sm font-body-sm">
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Syarat &amp; Ketentuan</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Keamanan Cloud ISO 27001</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-inverse-on-surface/70 hover:text-brand-primary-bright transition-colors"
+                  href="#"
+                  >Status Server Realtime</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Footer Bottom String verbatim from JSON -->
+        <div
+          class="pt-8 flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-inverse-on-surface/60 gap-4"
+        >
+          <div>
+            © 2026 Jingga POS. Solusi kasir &amp; manajemen resto &amp; cafe
+            modern.
+          </div>
+          <div class="flex items-center gap-6">
+            <span
+              class="hover:text-brand-primary-bright transition-colors cursor-pointer"
+              >Indonesia</span
+            >
+            <span
+              class="hover:text-brand-primary-bright transition-colors cursor-pointer"
+              >Bahasa Indonesia</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/6281934631646?text=Halo%20Jingga%20POS%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20Anda."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat via WhatsApp"
+      class="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#1ebe5b] hover:scale-110 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40 transition-all duration-200"
+    >
+      <span
+        class="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping motion-reduce:hidden"
+        aria-hidden="true"
+      ></span>
+      <svg
+        class="relative w-8 h-8"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M16.004 3C8.826 3 3 8.826 3 16.004c0 2.294.6 4.535 1.74 6.51L3 29l6.65-1.71a12.96 12.96 0 0 0 6.354 1.656h.005C23.18 28.946 29 23.12 29 15.998 29 8.826 23.18 3 16.004 3Zm0 23.74h-.004a10.77 10.77 0 0 1-5.49-1.503l-.394-.234-3.948 1.015 1.054-3.848-.257-.395a10.73 10.73 0 0 1-1.65-5.771c0-5.945 4.84-10.785 10.793-10.785 2.882 0 5.59 1.123 7.627 3.162a10.72 10.72 0 0 1 3.157 7.63c-.003 5.946-4.842 10.729-10.888 10.729Zm5.915-8.063c-.324-.162-1.918-.946-2.215-1.054-.297-.108-.513-.162-.729.162-.216.324-.837 1.054-1.026 1.27-.189.216-.378.243-.702.081-.324-.162-1.368-.504-2.605-1.608-.963-.859-1.613-1.92-1.802-2.244-.189-.324-.02-.499.142-.66.146-.145.324-.378.486-.567.162-.189.216-.324.324-.54.108-.216.054-.405-.027-.567-.081-.162-.729-1.757-.999-2.405-.263-.632-.53-.546-.729-.556l-.621-.011a1.19 1.19 0 0 0-.864.405c-.297.324-1.134 1.108-1.134 2.702 0 1.594 1.161 3.134 1.323 3.35.162.216 2.285 3.49 5.537 4.894.774.334 1.378.534 1.849.683.777.247 1.484.212 2.043.129.623-.093 1.918-.784 2.188-1.541.27-.757.27-1.405.189-1.541-.081-.135-.297-.216-.621-.378Z"
+        />
+      </svg>
+    </a>
+  </body>
+</html>
